@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "react-toastify/ReactToastify.min.css";
+
+h1 {
+  @apply truncate text-xl font-semibold text-gray-900;
+}
+a {
+  @apply text-indigo-600;
+}
+
+.table {
+  @apply min-w-full overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg;
+  table {
+    @apply min-w-full divide-y divide-gray-300;
+  }
+  thead {
+    @apply bg-gray-50;
+  }
+  th {
+    @apply px-3 py-3.5 text-left text-sm font-semibold text-gray-900;
+  }
+  tbody {
+    @apply divide-y divide-gray-200 bg-white;
+  }
+
+  .highlight {
+    @apply font-medium text-gray-900;
+  }
+  td {
+    @apply whitespace-nowrap px-3 py-4 text-sm text-gray-500;
+  }
+}
+
+.button {
+  @apply inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto;
+  &.outlined {
+    @apply bg-white border-indigo-600 border-2 text-indigo-600 hover:bg-gray-50;
+  }
+}
+
+.form {
+  @apply space-y-8;
+  & > div {
+    @apply sm:grid sm:grid-cols-3 sm:items-start sm:gap-2 sm:pt-2;
+    & div {
+      @apply mt-1 sm:col-span-2 sm:mt-0;
+    }
+  }
+  label {
+    @apply block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2;
+  }
+  input {
+    @apply mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md;
+  }
+  .action {
+    @apply flex justify-end sm:col-span-2;
+  }
+}
+
+#interactive.viewport {
+  width: 640px;
+  height: 480px;
+}
+
+#interactive.viewport canvas,
+video {
+  float: left;
+  width: 640px;
+  height: 480px;
+}
+
+#interactive.viewport canvas.drawingBuffer,
+video.drawingBuffer {
+  margin-left: -640px;
+}
